@@ -1,0 +1,14 @@
+<body>
+        {{renderPage}}
+</body>
+
+<template name="layout">
+    {{> flashMessages}}
+    <div class="main-container">
+    {{> navbar}}
+
+    {{> yield}}
+
+    {{> footer}}
+    </div>
+</template>

@@ -1,0 +1,42 @@
+<template name="edit_project">
+    <div class="container pt">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Edit Project: <small>{{name}}</small></h2>
+                <form class="edit_project_form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Project Name" value="{{name}}">
+                    </div>
+                    <div class="form-group">
+                        <label>Project Date</label>
+                        <div class="input-group datetimepicker">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            <input id="projectDate" name="projectDate" class="set-due-date form-control" type="text" value="{{projectDate}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Client</label>
+                        <input type="text" class="form-control" id="client" name="client" placeholder="Client Name" value="{{client}}">
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <input type="text" class="form-control" id="type" name="type" placeholder="Project Type" value="{{type}}">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="{{description}}">
+                    </div>
+                    <div class="form-group">
+                        <label>Project Image</label>
+                        <input type="file" name="projectImage" id="projectImage">
+                        Current Image: <img class="edit-image" src="{{projectImage}}">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="/admin/projects" class="btn btn-default">Go Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
